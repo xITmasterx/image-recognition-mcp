@@ -1,0 +1,48 @@
+{
+  "name": "@akirose/image-recognition-mcp",
+  "version": "1.0.0",
+  "mcpName": "io.github.shalevshalit/image-recognition-mcp",
+  "description": "MCP server for AI-powered image recognition and description using OpenAI-compatible vision models.",
+  "type": "module",
+  "files": [
+    "dist/",
+    "bin/",
+    "README.md",
+    "LICENSE"
+  ],
+  "main": "dist/index.js",
+  "bin": {
+    "@akirose/image-recognition-mcp": "dist/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akirose/image-recognition-mcp.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "author": "akirose",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.15.0",
+    "openai": "^5.8.3"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.12",
+    "shx": "^0.4.0",
+    "typescript": "^5.0.0",
+    "vitest": "^1.6.0"
+  },
+  "scripts": {
+    "test": "vitest run",
+    "test:unit": "vitest run test/index.test.ts",
+    "test:integration": "OPENAI_BASE_URL=http://127.0.0.1:1234/v1 OPENAI_MODEL=qwen/qwen3-vl-4b ALLOWED_IMAGE_PATHS=./test vitest run test/describe-image-integration.test.ts",
+    "start": "node index.js",
+    "build": "tsc && shx chmod +x dist/*.js",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm run build"
+  }
+}

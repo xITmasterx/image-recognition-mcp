@@ -7,7 +7,9 @@ import { z } from "zod";
 import { isPathLocal, validateLocalPath, validateUrlDomain } from "./path-validator.js";
 import { createLocalImageContent, createUrlImageContent } from "./image-processor.js";
 
-const openai = new OpenAI();
+const openai = new OpenAI({
+  baseURL: process.env.OPENAI_BASE_URL,
+});
 
 // Get the model from environment variable or use default
 const model = process.env.OPENAI_MODEL || "gpt-5-mini";

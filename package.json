@@ -1,5 +1,5 @@
 {
-  "name": "@akirose/image-recognition-mcp",
+  "name": "@xitmasterx/image-recognition-mcp",
   "version": "1.0.0",
   "mcpName": "io.github.shalevshalit/image-recognition-mcp",
   "description": "MCP server for AI-powered image recognition and description using OpenAI-compatible vision models.",
@@ -12,16 +12,16 @@
   ],
   "main": "dist/index.js",
   "bin": {
-    "@akirose/image-recognition-mcp": "dist/index.js"
+    "@xitmasterx/image-recognition-mcp": "dist/index.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/akirose/image-recognition-mcp.git"
+    "url": "git+https://github.com/xITmasterx/image-recognition-mcp.git"
   },
   "publishConfig": {
     "access": "public"
   },
-  "author": "akirose",
+  "author": "akirose, xITmasterx",
   "license": "MIT",
   "engines": {
     "node": ">=18.0.0"

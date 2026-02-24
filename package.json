@@ -12,8 +12,8 @@
   ],
   "main": "dist/index.js",
   "bin": {
-    "@xitmasterx/image-recognition-mcp": "dist/index.js"
-  },
+    "@it-master/image-recognition-mcp": "dist/index.js"
+  }
   "repository": {
     "type": "git",
     "url": "git+https://github.com/xITmasterx/image-recognition-mcp.git"
